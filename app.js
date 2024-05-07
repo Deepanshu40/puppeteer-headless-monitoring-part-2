@@ -13,7 +13,7 @@ const directoryPath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'lin
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
             console.error('Failed to list directory contents:', err);
-            return res.status(500).send('Failed to list directory contents');
+            // return res.status(500).send('Failed to list directory contents');
         }
         console.log(files);
     });
