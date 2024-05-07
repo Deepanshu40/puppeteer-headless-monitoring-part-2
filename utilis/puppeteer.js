@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 const prodExecutablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome');
 const devExecutablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'win64-124.0.6367.91', 'chrome-win64', 'chrome.exe');
 
-const directoryPath = path.join(__dirname, '..', '.cache', 'puppeteer');
+const directoryPath = path.join(__dirname, '.cache');
 const fs = require('fs');
 
 
