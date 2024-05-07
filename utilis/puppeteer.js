@@ -3,7 +3,9 @@ const puppeteer = require('puppeteer');
 const prodExecutablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome');
 const devExecutablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'win64-124.0.6367.91', 'chrome-win64', 'chrome.exe');
 
-const directoryPath = path.join(__dirname, '..', 'puppeteer', 'chrome');
+const directoryPath1 = path.join(__dirname, '..');
+const directoryPath2 = path.join(__dirname, '..', 'puppeteer', 'chrome');
+
 const fs = require('fs');
 
 
@@ -18,7 +20,15 @@ const fs = require('fs');
 
 module.exports.puppeteerSession = async () => {
 
-    fs.readdir(directoryPath, (err, files) => {
+    fs.readdir(directoryPath1, (err, files) => {
+        if (err) {
+            console.error('Failed to list directory contents:', err);
+        }
+        console.log(files);
+    });
+
+    
+    fs.readdir(directoryPath2, (err, files) => {
         if (err) {
             console.error('Failed to list directory contents:', err);
         }
