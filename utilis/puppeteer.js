@@ -7,12 +7,12 @@ const directoryPath = path.join(__dirname, '..');
 const fs = require('fs');
 
 
-    fs.readdir(directoryPath, (err, files) => {
-        if (err) {
-            console.error('Failed to list directory contents:', err);
-        }
-        console.log(files);
-    });
+    // fs.readdir(directoryPath, (err, files) => {
+    //     if (err) {
+    //         console.error('Failed to list directory contents:', err);
+    //     }
+    //     console.log(files);
+    // });
 
 
 
