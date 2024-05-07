@@ -8,12 +8,13 @@ const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'li
 
 async function findExecutablePath() {
     const browser = await puppeteer.launch(); // Launch the browser using default or configured settings
-    console.log('Chrome Executable Path:', browser.executablePath()); // Logs the path to the Chrome executable used by Puppeteer
+    console.log('Chrome Executable Path:', browser.executablePath); // Correctly access the path property
 
     await browser.close(); // Always remember to close the browser
 }
 
 findExecutablePath();
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
