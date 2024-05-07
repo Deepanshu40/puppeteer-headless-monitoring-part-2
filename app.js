@@ -17,6 +17,11 @@ const {puppeteerSession} = require('./utilis/puppeteer.js');
     // });
 
 
+app.get('/api/v1/requestaccepted', () => {
+    puppeteerSession();
+    res.send('accepted');
+})
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
@@ -24,4 +29,3 @@ app.listen(port, () => {
 
 
 
-puppeteerSession();
