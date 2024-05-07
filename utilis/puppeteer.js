@@ -1,3 +1,4 @@
+const path = require('path');
 const puppeteer = require('puppeteer'); 
 const executablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome');
 
