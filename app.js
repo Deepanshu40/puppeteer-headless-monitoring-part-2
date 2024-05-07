@@ -4,7 +4,9 @@ const app = express();
 const port = 8080;
 const puppeteer = require('puppeteer');
 const {puppeteerSession} = require('./utilis/puppeteer.js');
+const cors = require('cors');
 
+app.use(cors({}));
 // const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux', 'chrome.exe');
 // const fs = require('fs');
 
