@@ -3,9 +3,7 @@ const path = require('path');
 const app = express();
 const port = 8080;
 const puppeteer = require('puppeteer');
-// const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux', 'chrome.exe');
-// const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux', 'chrome);
-
+const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux', 'chrome.exe');
 const fs = require('fs');
 const directoryPath = path.join(__dirname, '.cache', 'puppeteer', 'chrome');
 
@@ -13,7 +11,7 @@ const directoryPath = path.join(__dirname, '.cache', 'puppeteer', 'chrome');
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
             console.error('Failed to list directory contents:', err);
-            // return res.status(500).send('Failed to list directory contents');
+            return res.status(500).send('Failed to list directory contents');
         }
         console.log(files);
     });
