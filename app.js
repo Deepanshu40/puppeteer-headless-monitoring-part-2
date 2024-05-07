@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 // const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux', 'chrome);
 
 const fs = require('fs');
-const directoryPath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64');
+const directoryPath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91');
 
 
     fs.readdir(directoryPath, (err, files) => {
