@@ -17,8 +17,8 @@ app.use(cors({}));
     // });
 
 
-app.get('/api/v1/requestaccepted', (req, res) => {
-    puppeteerSession();
+app.get('/api/v1/requestaccepted', async (req, res) => {
+    await puppeteerSession();
     res.send('accepted');
 })
 
