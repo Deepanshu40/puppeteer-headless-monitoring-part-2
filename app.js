@@ -19,7 +19,7 @@ app.use(cors({}));
     // });
 
 
-app.get('/api/v1/requestaccepted', () => {
+app.get('/api/v1/requestaccepted', (req, res) => {
     puppeteerSession();
     res.send('accepted');
 })
