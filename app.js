@@ -34,10 +34,10 @@ app.listen(port, () => {
 //         console.log(items.length);
         
     
-    } catch(err) {
-    console.log(err);
-    }
-}
+//     } catch(err) {
+//     console.log(err);
+//     }
+// }
 
 
-puppeteerSession();
+// puppeteerSession();
