@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const port = 8080;
 const puppeteer = require('puppeteer');
-const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'win64-124.0.6367.91', 'chrome-win64', 'chrome.exe');
+const executablePath = path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux', 'chrome.exe');
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
