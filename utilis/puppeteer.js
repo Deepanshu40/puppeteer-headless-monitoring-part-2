@@ -55,19 +55,21 @@ module.exports.puppeteerSession = async () => {
 
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
             await page.goto('https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded', { waitUntil: 'networkidle0' });
-            await page.waitForSelector('#userId');
-            await page.type('#userId', 'HRDARCLTAN');
-            await page.type('#psw', 'RAIN1234');
-            await page.type('#tanpan', 'RTKD06754G' );
+            const htmlContent = await page.content();
+            console.log(htmlContent);
+    //         await page.waitForSelector('#userId');
+    //         await page.type('#userId', 'HRDARCLTAN');
+    //         await page.type('#psw', 'RAIN1234');
+    //         await page.type('#tanpan', 'RTKD06754G' );
 
-            console.log('reaching captcha starting stage');
-            const captchaSolution = await handleCaptcha(page);
-            await page.type('#captcha', captchaSolution);
-            console.log(`entered captcha ${captchaSolution}`);
-            await page.click('#clickLogin');
-            console.log('clicked login button');
-            await page.waitForNavigation({ waitUntil: 'networkidle0' });
-            await page.waitForSelector('#pannumber');
+    //         console.log('reaching captcha starting stage');
+    //         const captchaSolution = await handleCaptcha(page);
+    //         await page.type('#captcha', captchaSolution);
+    //         console.log(`entered captcha ${captchaSolution}`);
+    //         await page.click('#clickLogin');
+    //         console.log('clicked login button');
+    //         await page.waitForNavigation({ waitUntil: 'networkidle0' });
+    //         await page.waitForSelector('#pannumber');
     } catch(err) {
     console.log(err);
     }
