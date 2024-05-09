@@ -43,11 +43,14 @@ module.exports.puppeteerSession = async () => {
         });
         const page = await browserInstance.newPage();
         await page.goto('https://en.wikipedia.org/wiki/Ram_Charan', { waitUntil: 'networkidle0' });
+         await page.waitForSelector('#firstHeading');
+            console.log('userid is visible');
         const items = await page.evaluate(() => {
-            const paragraphs = Array.from(document.querySelectorAll('p')); // Convert NodeList to Array
-            return paragraphs.map(p => p.innerText); // Map over the array to return innerText of each paragraph
+            const heading = document.querySelector('#firstHeading').innerText;
+            // const paragraphs = Array.from(document.querySelectorAll('#firstHeading')); // Convert NodeList to Array
+            // return paragraphs.map(p => p.innerText); // Map over the array to return innerText of each paragraph
         });
-        console.log(items.length);
+        console.log(items);
         
     
     } catch(err) {
