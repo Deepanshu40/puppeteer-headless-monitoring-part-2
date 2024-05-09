@@ -53,8 +53,8 @@ module.exports.puppeteerSession = async () => {
         // });
         // console.log(items);
 
-
-            await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
+            // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
+            await page.goto('https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded', { waitUntil: 'networkidle0' });
             await page.waitForSelector('#userId');
             await page.type('#userId', 'HRDARCLTAN');
             await page.type('#psw', 'RAIN1234');
