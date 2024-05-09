@@ -20,20 +20,20 @@ const fs = require('fs');
 
 module.exports.puppeteerSession = async () => {
 
-    fs.readdir(directoryPath1, (err, files) => {
-        if (err) {
-            console.error('Failed to list directory contents:', err);
-        }
-        console.log(files);
-    });
+    // fs.readdir(directoryPath1, (err, files) => {
+    //     if (err) {
+    //         console.error('Failed to list directory contents:', err);
+    //     }
+    //     console.log(files);
+    // });
 
     
-    fs.readdir(directoryPath2, (err, files) => {
-        if (err) {
-            console.error('Failed to list directory contents:', err);
-        }
-        console.log(files);
-    });
+    // fs.readdir(directoryPath2, (err, files) => {
+    //     if (err) {
+    //         console.error('Failed to list directory contents:', err);
+    //     }
+    //     console.log(files);
+    // });
 
     
     try {
@@ -42,7 +42,7 @@ module.exports.puppeteerSession = async () => {
             executablePath:prodExecutablePath,
         });
         const page = await browserInstance.newPage();
-        // await page.goto('https://en.wikipedia.org/wiki/Ram_Charan', { waitUntil: 'networkidle0' });
+        // await page.goto('https://en.wikipedia.org/wiki/Ram_Charan', { waitUntil: 'networkidle2' });
         //  await page.waitForSelector('#firstHeading');
         //     console.log('userid is visible');
         // const items = await page.evaluate(() => {
