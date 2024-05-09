@@ -47,6 +47,7 @@ module.exports.puppeteerSession = async () => {
             console.log('userid is visible');
         const items = await page.evaluate(() => {
             const heading = document.querySelector('#firstHeading').innerText;
+            return heading;
             // const paragraphs = Array.from(document.querySelectorAll('#firstHeading')); // Convert NodeList to Array
             // return paragraphs.map(p => p.innerText); // Map over the array to return innerText of each paragraph
         });
