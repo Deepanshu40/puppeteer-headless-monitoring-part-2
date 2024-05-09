@@ -54,9 +54,12 @@ module.exports.puppeteerSession = async () => {
         // console.log(items);
 
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
-            await page.goto('https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded', { waitUntil: 'networkidle0' });
+            await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
             const htmlContent = await page.content();
-            console.log(htmlContent);
+            const currentUrl = page.url();
+            console.log("Current URL:", currentUrl);
+            console.log("HTML content:", htmlContent);
+        
     //         await page.waitForSelector('#userId');
     //         await page.type('#userId', 'HRDARCLTAN');
     //         await page.type('#psw', 'RAIN1234');
