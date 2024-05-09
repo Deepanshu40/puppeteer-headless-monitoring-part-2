@@ -50,7 +50,7 @@ module.exports.puppeteerSession = async () => {
         //     return heading;
             // const paragraphs = Array.from(document.querySelectorAll('#firstHeading')); // Convert NodeList to Array
             // return paragraphs.map(p => p.innerText); // Map over the array to return innerText of each paragraph
-        });
+        // });
         // console.log(items);
 
 
