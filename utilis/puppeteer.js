@@ -42,16 +42,22 @@ module.exports.puppeteerSession = async () => {
             executablePath:prodExecutablePath,
         });
         const page = await browserInstance.newPage();
-        await page.goto('https://en.wikipedia.org/wiki/Ram_Charan', { waitUntil: 'networkidle0' });
-         await page.waitForSelector('#firstHeading');
-            console.log('userid is visible');
-        const items = await page.evaluate(() => {
-            const heading = document.querySelector('#firstHeading').innerText;
-            return heading;
+        // await page.goto('https://en.wikipedia.org/wiki/Ram_Charan', { waitUntil: 'networkidle0' });
+        //  await page.waitForSelector('#firstHeading');
+        //     console.log('userid is visible');
+        // const items = await page.evaluate(() => {
+        //     const heading = document.querySelector('#firstHeading').innerText;
+        //     return heading;
             // const paragraphs = Array.from(document.querySelectorAll('#firstHeading')); // Convert NodeList to Array
             // return paragraphs.map(p => p.innerText); // Map over the array to return innerText of each paragraph
         });
-        console.log(items);
+        // console.log(items);
+
+
+            await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
+            await page.waitForSelector('#userId');
+            await page.type('#userId', 'hello');
+
         
     
     } catch(err) {
