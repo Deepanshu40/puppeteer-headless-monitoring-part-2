@@ -1,6 +1,6 @@
 const path = require('path');
 const puppeteer = require('puppeteer'); 
-const prodExecutablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome');
+const prodExecutablePath = '/opt/render/project/src/.cache/puppeteer/chrome-headless-shell/linux-124.0.6367.91/chrome-headless-shell-linux64/chrome-headless-shell';
 const devExecutablePath = path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'win64-124.0.6367.91', 'chrome-win64', 'chrome.exe');
 
 const directoryPath1 = path.join(__dirname, '..');
